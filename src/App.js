@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import NarrativeComparison from './narrativecomparison';
+import PieWithPatterns from './PieChartWithPatterns';
+import AIBotDiagram from './aibotdiagram';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Crypto Analytics Dashboard</h1>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <div>
+          <h2>Narrative Price Comparison</h2>
+          <NarrativeComparison />
+        </div>
+        <div>
+          <h2>TVL Distribution</h2>
+          <PieWithPatterns />
+        </div>
+        <div>
+          <h2>AI Bot Diagram</h2>
+          <AIBotDiagram />
+        </div>
+      </div>
     </div>
   );
 }
